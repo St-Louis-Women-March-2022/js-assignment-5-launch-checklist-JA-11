@@ -27,19 +27,13 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    let form = document.querySelector("form");
+    const form = document.querySelector("form");
     form.addEventListener("submit", function (event) {
-        pilot = document.querySelector("input[name=pilotName]");
-        copilot = document.querySelector("input[name=copilotName]");
-        fuelLevel = document.querySelector("input[name=fuelLevel]");
-        cargoLevel = document.querySelector("input[name=cargoMass]");
-        
-        list = document.getElementById("faultyItems");
-        let pilotStatus = document.getElementById("pilotStatus");
-        let copilotStatus = document.getElementById("copilotStatus");
-        let fuelStatus = document.getElementById("fuelStatus");
-        let launchStatus = document.getElementById("launchStatus");
-        let cargoStatus = document.getElementById("cargoStatus");
+        const pilotStatus = document.getElementById("pilotStatus");
+        const copilotStatus = document.getElementById("copilotStatus");
+        const fuelStatus = document.getElementById("fuelStatus");
+        const launchStatus = document.getElementById("launchStatus");
+        const cargoStatus = document.getElementById("cargoStatus");
         
         launchStatus.innerHTML = "Awaiting Information Before Launch";
         launchStatus.style.color = "";
